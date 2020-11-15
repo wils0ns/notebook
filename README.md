@@ -6,13 +6,13 @@ Wilson Santos' Software Engineer, Tools and Infrastructure (SETI) notebook
 
 ### CI/CD
 
-- [Docker](docker)
+<!-- - [Docker](docker) -->
+- [Terraform](terraform)
+- [SaltStack](saltstack)
 <!-- - [Kubernetes](k8s) -->
 <!-- - [Helm](helm) -->
 <!-- - [GitOps](gitops) -->
 <!-- - [ArgoCD](argocd) -->
-- [Terraform](terraform)
-- [SaltStack](saltstack)
 <!-- - [Ansible](ansible) -->
 <!-- - [Jenkins](jenkins) -->
 <!-- - [GitHub](GitHub) actions, pages, etc-->
