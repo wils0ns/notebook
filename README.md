@@ -1,6 +1,4 @@
-# wss.re
-
-Wilson Santos' Software Engineer, Tools and Infrastructure (SETI) notebook
+# Software Engineer, Tools and Infrastructure (SETI) notebook
 
 ## Topics
 
