@@ -42,6 +42,7 @@ Wilson Santos' Software Engineer, Tools and Infrastructure (SETI) notebook
 ### Observability
 
 - [Istio](istio)
+
 <!-- - [Kiali](kiali)
 - [Jaeger](jaeger)
 - [Prometheus](prometheus)
