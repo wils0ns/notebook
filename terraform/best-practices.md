@@ -3,6 +3,8 @@ toc: true
 ---
 # Terraform Best practices
 
+{% toc %}
+
 ## The master branch of the infrastructure repository should be a 1:1 representation of what’s actually deployed in production
 
 Once you start using Terraform, do not make changes via a web UI, or manual API calls, or any other mechanism. Running `terraform apply` against the production environment should only be done from the master branch.
