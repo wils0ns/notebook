@@ -1,6 +1,7 @@
+---
+toc: true
+---
 # Terraform Best practices
-
-[[_TOC_]]
 
 ## The master branch of the infrastructure repository should be a 1:1 representation of what’s actually deployed in production
 
