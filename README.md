@@ -1,4 +1,4 @@
-# Software Engineer, Tools and Infrastructure (SETI) notebook
+# Software Engineering, Tools and Infrastructure (SETI) notebook
 
 ## Topics
 
