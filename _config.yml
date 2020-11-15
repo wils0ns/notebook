@@ -1,3 +1,8 @@
 plugins:
   - jekyll-toc
 theme: jekyll-theme-cayman
+defaults:
+  - scope:
+      path: ""
+    values:
+      toc: true
