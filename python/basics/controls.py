@@ -54,3 +54,20 @@ x = 5
 while x > 0:
     print('*'*x)
     x -= 1
+
+count = 3
+while count > 0:
+    # Get user input
+    op = input('>>>')
+
+    # If op is an empty string
+    if not op:
+        break
+
+    # Evaluate the value of `op` as actual python code
+    eval(*op.split())
+
+    count -= 1
+else:
+    # If while runs uninterrupted, print the line below
+    print('Maximum code executed. Bye!')
