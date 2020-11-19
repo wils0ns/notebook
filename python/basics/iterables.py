@@ -1,3 +1,9 @@
+# Strings are also iterable
+x = 'Wilson'
+for i in x:
+    # prints every single letter in x
+    print(i)
+
 # List
 
 x = [1, 2, 3]  # list
