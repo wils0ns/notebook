@@ -61,10 +61,10 @@
 - [OAuth]
 - [Keycloak] -->
 
-<!-- ### Design and Architecture
+### Design and Architecture
 
-- [Mermaid]
-- [PlantUML] -->
+- [Mermaid](mermaid)
+<!-- - [PlantUML] -->
 
 <!-- ### Mobile Platforms
 
