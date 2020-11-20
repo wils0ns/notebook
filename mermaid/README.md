@@ -4,12 +4,14 @@
 
 ## Table of Contents
 
-* [Graph](#graph)
-  * [Node shapes](#node-shapes)
-* [Flowchart](#flowchart)
-  * [Link Between Nodes](#link-between-nodes)
-  * [Orientation](#orientation)
-  * [Subgraphs](#subgraphs)
+- [Mermaid](#mermaid)
+  - [Table of Contents](#table-of-contents)
+  - [Graph](#graph)
+    - [Node shapes](#node-shapes)
+  - [Flowchart](#flowchart)
+    - [Link between nodes](#link-between-nodes)
+    - [Orientation](#orientation)
+    - [Subgraphs](#subgraphs)
 
 ## Graph
 
@@ -69,13 +71,13 @@ graph LR
 
 Longer links:
 
-| Length | 1 | 2 | 3 |
-|-|-|-|-|
-| Normal | --- | ---- | ----- |
-| Normal with arrow | --> | ---> | ----> |
-| Thick | === | ==== | ===== |
-| Thick with arrow | ==> | ===> | ====> |
-| Dotted | -.- | -..- | -...- |
+| Length            | 1    | 2     | 3      |
+| ----------------- | ---- | ----- | ------ |
+| Normal            | ---  | ----  | -----  |
+| Normal with arrow | -->  | --->  | ---->  |
+| Thick             | ===  | ====  | =====  |
+| Thick with arrow  | ==>  | ===>  | ====>  |
+| Dotted            | -.-  | -..-  | -...-  |
 | Dotted with arrow | -.-> | -..-> | -...-> |
 
 ```mermaid
@@ -147,10 +149,13 @@ graph LR
   a ==> b
   c ==> d
 
-  style cluster fill:#a3c,stroke:#fff,stroke-width:2px
-  style switch fill:#666,stroke:#fff,stroke-width:2px
+  classDef style1 fill:#a3c,stroke:#fff,stroke-width:2px
+  classDef style2 fill:#666,stroke:#fff,stroke-width:2px
 
-  %% Link styles are references by the order they were defined. Indexed from zero.
+  class cluster style1
+  class switch style2
+
+  %% link styles are defined by referencing the order at which they were declared, indexed from zero
   linkStyle 0 stroke:#ff3,stroke-width:4px
 
 ```
