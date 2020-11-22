@@ -28,17 +28,14 @@ for k, v in x.items():  # for each key in dict
     print(k, v)
 
 
-has_multiple_of_3 = False
 for i in [1, 2, 4]:
     if i == 1:
         continue
     print(i)
     if i % 3 == 0:
-        has_multiple_of_3 = True
         break
-
-if not has_multiple_of_3:
-    print('No multiple of 3 found.')
+else:
+    print('🧨')
 
 for i in [1, 2, 3, 4]:
     if i == 1:

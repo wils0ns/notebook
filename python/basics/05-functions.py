@@ -11,7 +11,6 @@ def my_func():
     my_func is a function that takes no arguments and does nothing.
     Use triple-double-quotes blocks to write a docstring.
     """
-    pass
 
 
 def example(): pass  # This function does nothing and has no docstring.
@@ -26,7 +25,7 @@ def real_func():
 
 
 return_from_real_func = real_func()
-print(return_from_real_func is None)
+print(return_from_real_func is None)  # True
 
 
 def sum(a: float, b: float) -> float:
@@ -109,3 +108,108 @@ def print_all(*args, **kwargs):
 
 
 print_all(1, 'Filipe', '🎭', name='Wilson', emoji='🎄')
+
+
+def multi_return(x, y):
+    # multiple return values are packages into tuple
+    return x**2, y**2
+
+
+x = multi_return(2, 3)
+print(isinstance(x, tuple))
+
+
+# Nested functions
+
+def pairs_between(x, y):
+
+    def _evens():
+        return [i for i in range(x, y) if i % 2 == 0]
+
+    def _odds():
+        return [i for i in range(y, x, -1) if i % 2 != 0]
+
+    return zip(_evens(), _odds())
+
+
+print(list(pairs_between(0, 10)))
+
+
+# `global` vs `local` vs `nonlocal` scopes
+
+gx = 1  # global variable
+
+
+def a():
+    # gx is lookup within local scope, but not found
+    # moves on to lookup at the global scope
+    print(gx)
+
+
+a()  # prints 1
+
+
+def b():
+    # defining a local variable
+    gx = 2
+    print(gx)
+
+
+b()  # prints 2
+
+# global variable not mutated
+print(gx)  # prints 1
+
+
+def c():
+    # binding gx from global scope so it can be mutated
+    global gx
+    gx = 3
+    print(gx)
+
+
+c()  # prints 3
+print(gx)  # prints 3
+gx = 4
+print(gx)  # prints 4
+
+
+def d():
+    gx = 1
+
+    def d1():
+        # refernce the gx from `d` local scope
+        nonlocal gx
+        gx = 3
+    d1()
+    print(gx)
+
+
+d()  # prints 3
+print(gx)  # prints 4
+
+
+# Non-literal variables are passed as reference
+
+y = [1, 2, 3]
+z = {0: 'a', 1: 'b'}
+
+
+def e(n):
+    n[0] = '🎄'
+
+
+e(y)
+print(y[0])  # prints 🎄
+
+e(z)
+print(z[0])  # prints 🎄
+
+
+def call(f):
+    """Anything can be passed as an argument"""
+    return f()
+
+
+call(a)  # prints 4
+call(b)  # prints 2
