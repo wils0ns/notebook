@@ -22,6 +22,14 @@ print(x[7:])  # value
 print(x[3:6])  # ple
 print(x[::-1])  # eulav elpmaS
 
+# Strings are immutable
+
+try:
+    x[0] = 1
+except TypeError as e:
+    # This would run
+    print(e)
+
 # String formatting
 print(f'Value of x is: {x}')  # called f-string. It is the prefered format
 print('Value of x is: {var}'.format(var=x))
@@ -45,12 +53,12 @@ print('*' * 3)  # ***
 
 x = '''
 This is a Heredoc
-and it takes the string text as is.
+    and it takes the string text as is.
 Respecting the format completely.
 Including          spaces.
 '''
 print(x)
 
-chess = char('9814')
+chess = chr(9814)
 
 print(chess)

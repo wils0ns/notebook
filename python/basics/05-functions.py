@@ -1,3 +1,5 @@
+from functools import reduce
+
 # built-in functions
 
 print('Hi!')
@@ -57,10 +59,7 @@ def better_sum(*n):
     Returns:
         float: the sum of all numbers
     """
-    _sum = 0
-    for i in n:
-        _sum += i
-    return _sum
+    return reduce(lambda x, y: x+y, n)
 
 
 print(better_sum(1, 2, 3, 4, 5))
@@ -116,7 +115,7 @@ def multi_return(x, y):
 
 
 x = multi_return(2, 3)
-print(isinstance(x, tuple))
+print(isinstance(x, tuple))  # prints True
 
 
 # Nested functions

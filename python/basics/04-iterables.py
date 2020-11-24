@@ -7,9 +7,10 @@ for i in x:
 # List
 
 x = [1, 2, 3]  # list
-x = {1, 1, 2, 2, 3, 3}  # set: Unique list of values
+x = {1, 1, 2, 2, 3, 3}  # set: Unique, list of object
 print(x, len(x))  # {1,2,3} 3
 x = (1, 2, 3)  # Tuple: immutable list
+x = (1,)  # a tuple with one element. The comma (,) is required
 
 # List expressions
 
@@ -17,7 +18,7 @@ x = [i for i in range(1, 4)]
 print(x)  # [1,2,3]
 
 x = [a+b for a in [1, 2, 3] for b in [1, 2, 3]]  # for inside for
-print(x)
+print(x)  # [2, 3, 4, 3, 4, 5, 4, 5, 6]
 
 x = [a[0]+a[1] for a in zip([1, 2, 3], [1, 2, 3])]
 print(x)  # 2, 4, 6
